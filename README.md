@@ -27,3 +27,12 @@ A personal networth tracking application that connects to your bank accounts and
 5. **Networth Calculator** - Aggregates assets minus liabilities
 6. **Dashboard UI** - Visualizes networth over time, accounts breakdown
 7. **Scheduled Jobs** - Refreshes balances periodically
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the app.
