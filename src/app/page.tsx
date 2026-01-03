@@ -64,8 +64,13 @@ export default async function Home() {
       </main>
 
       <footer className="border-t border-zinc-200 bg-white py-8 dark:border-zinc-800 dark:bg-zinc-900">
-        <div className="mx-auto max-w-7xl px-4 text-center text-sm text-zinc-600 dark:text-zinc-400">
-          Built with Plaid, Next.js, and Clerk
+        <div className="mx-auto max-w-7xl px-4 text-center">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">
+            Track your financial health
+          </p>
+          <p className="mt-2 text-sm text-zinc-500">
+            &copy; {new Date().getFullYear()} NetworthApp. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>
