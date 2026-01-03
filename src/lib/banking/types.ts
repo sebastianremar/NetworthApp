@@ -22,4 +22,5 @@ export interface BankingService {
   createLinkToken(userId: string): Promise<string>;
   exchangePublicToken(publicToken: string): Promise<ExchangeTokenResult>;
   getAccounts(accessToken: string): Promise<BankAccount[]>;
+  getBalances(accessToken: string): Promise<BankAccount[]>;
 }

@@ -115,4 +115,23 @@ export const plaidAdapter: BankingService = {
       isoCurrencyCode: acc.balances.iso_currency_code || null,
     }));
   },
+
+  async getBalances(accessToken: string): Promise<BankAccount[]> {
+    const plaidClient = getPlaidClient();
+    const response = await plaidClient.accountsBalanceGet({
+      access_token: accessToken,
+    });
+
+    return response.data.accounts.map((acc) => ({
+      id: acc.account_id,
+      name: acc.name,
+      officialName: acc.official_name || null,
+      type: acc.type,
+      subtype: acc.subtype || null,
+      mask: acc.mask || null,
+      currentBalance: acc.balances.current,
+      availableBalance: acc.balances.available,
+      isoCurrencyCode: acc.balances.iso_currency_code || null,
+    }));
+  },
 };
